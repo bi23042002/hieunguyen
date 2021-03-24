@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/mysite.css">
+
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li>
+                <a href="#">home</a>
+            </li>
+            <li>
+                <a href="#">about</a>
+            </li>
+            <li>
+                <a href="#">services</a>
+            </li>
+            <li>
+                <a href="#">team</a>
+            </li>
+            <li>
+                <a href="#">contact</a>
+            </li>
+            <li>
+                <a href="#">provip</a>
+            </li>
+        </ul>
+    </header>
+    <section class="banner"></section>
+
+    <div class="content">
+        <h1 class="title">nguyentrung hieu</h1>
+        <button class="fun">iu anh toan</button>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY)
+        })
+    </script>
+    <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function() {
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</body>
+
+</html>
